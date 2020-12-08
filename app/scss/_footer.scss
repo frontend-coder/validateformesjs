@@ -1,0 +1,114 @@
+/* Cookie Dialog */
+:root {
+  --purple: #000000;
+  --red: #779600;
+}
+
+#gdpr-cookie-message {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  margin-left: 30px;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 375px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+  font-family: system-ui;
+  background-color: var(--purple);
+}
+
+#gdpr-cookie-message h4 {
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--red);
+}
+
+#gdpr-cookie-message h5 {
+  margin-bottom: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--red);
+}
+
+#gdpr-cookie-message p,
+#gdpr-cookie-message ul {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #ffffff;
+}
+
+#gdpr-cookie-message p:last-child {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+#gdpr-cookie-message li {
+  display: inline-block;
+  width: 49%;
+}
+
+#gdpr-cookie-message a {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.75);
+  padding-bottom: 2px;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--red);
+  transition: all 0.3s ease-in;
+}
+
+#gdpr-cookie-message a:hover {
+  border-bottom-color: var(--red);
+  color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+#gdpr-cookie-message button {
+  margin-left: 15px;
+  border: none;
+  border-radius: 3px;
+  padding: 7px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  background: var(--red);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+#gdpr-cookie-message button:hover {
+  color: var(--red);
+  background: #ffffff;
+  transition: all 0.3s ease-in;
+}
+
+button#gdpr-cookie-advanced {
+  color: var(--red);
+  background: #ffffff;
+}
+
+#gdpr-cookie-message button:disabled {
+  opacity: 0.3;
+}
+
+#gdpr-cookie-message input[type="checkbox"] {
+  float: none;
+  margin-top: 0;
+  margin-right: 5px;
+}
+
+.footer__fon {
+  position: relative;
+  height: 500px;
+  background-color: #aa10aa;
+}
+
+.footer__wave {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  fill: #eeeeee;
+  transform: rotate(180deg);
+}

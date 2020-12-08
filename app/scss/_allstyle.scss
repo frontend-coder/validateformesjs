@@ -1,0 +1,53 @@
+.block {
+  padding: 60px 0;
+}
+
+.block__title {
+  margin-bottom: 30px;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.advance_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-left: -1.3333%;
+}
+
+// loremru12lkkj       mhhnn nhhfhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhhh
+// hhhhhhhhhhhhhhhhhhhhhhhh hhhhhhhhhhhhhhhhh
+.advance_wrapper_items {
+  flex-basis: 32%;
+  margin-bottom: 1.3333%;
+  margin-left: 1.3333%;
+  padding: 15px 10px;
+  max-width: 33%;
+
+  &-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.block__timer {
+  margin-bottom: 30px;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.timer__block {
+  padding-bottom: 250px;
+  background-color: #eeeeeeee;
+}
+
+.timer__left__title {
+  font-size: 1.5rem;
+}
+
+.former__block {
+  padding-top: 250px;
+  padding-bottom: 250px;
+  background-color: #00ffff;
+}
