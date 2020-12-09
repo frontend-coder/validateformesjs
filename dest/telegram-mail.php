@@ -5,20 +5,20 @@
 
 
 
-$projectname = $_POST['project_name'];
+$projectname = $_POST['name-project'];
 $formsubject = $_POST['form_subject'];
-$formplace = $_POST['form_place'];
-$formoption = $_POST['form_option'];
+$formplace = $_POST['position-place'];
+$formoption = $_POST['option-forme'];
 
-$name = $_POST['myname'];
-$email = $_POST['myemail'];
-$phone = $_POST['myphone'];
-$mytheme = $_POST['mytheme'];
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$mytheme = $_POST['massage'];
+$agree_form = $_POST['agree'];
 
 $token = "1408324998:AAE3fOILkdLpWDZvbvu32tqxN4bQl9KPEBQ";
 $chat_id = "-330347791";
 $arr = array(
-  'Адрес проекта: ' => $projectname,
+  'Название проекта: ' => $projectname,
   'Предмет сообщения: ' => $formsubject,
 	'Место размещения формы: ' => $formplace,
 	'Опции формы: ' => $formoption,
@@ -26,8 +26,8 @@ $arr = array(
 	
 	'Имя пользователя: ' => $name,
   'Телефон: ' => $phone,
-  'Email' => $email,
-  'Тема сообщения' => $mytheme
+  'Тема сообщения' => $mytheme,
+  'Согласие на обработку' => $agree_form
 );
 
 foreach($arr as $key => $value) {

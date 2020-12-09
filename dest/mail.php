@@ -5,9 +5,9 @@ $admin_email = array();
 foreach ( $_POST["admin_email"] as $key => $value ) {
 	array_push($admin_email, $value);
 }
-
+//$admin_email = 'frontendercode@gmail.com';
 $form_subject = trim($_POST["form_subject"]);
-
+$persone_shcool = 'Разработка сайтов с нуля';
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
@@ -38,7 +38,8 @@ $message = "<table style='width: 50%;'>$message</table>";
 
 
 // От кого
-$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'video.businesskvest.ru');
+
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], $persone_shcool );
  
 // Кому
 foreach ( $admin_email as $key => $value ) {

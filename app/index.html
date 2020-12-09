@@ -133,38 +133,39 @@
           <form id="form__one" class="form__one form_send_one">
             <input type="hidden" name="admin_email[]" value="frontendercode@gmail.com">
 
-            <input type="hidden" name="project_name" value="http://video.businesskvest.ru/new">
+            <input type="hidden" name="name-project" value="Мои тестовые проекты">
 
             <input type="hidden" name="form_subject" value="Тестирование валидации формы">
-            <input type="hidden" name="Место&nbsp;размещения" value="форма размещена в первом блоке на лендинге">
-            <input type="hidden" name="Опции&nbsp;формы" value="форма в стационарном блоке">
+            <input type="hidden" name="position-place" value="форма размещена в первом блоке на лендинге">
+            <input type="hidden" name="option-forme" value="форма в стационарном блоке">
 
             <label class="form__one-labeltext" for="form__one_input-no"> <span class="form__one__span">Имя*</span>
-              <input id="form__one_input-no" data-validate-field="famely" name="Имя" class="style__input" type="text"
+              <input id="form__one_input-no" data-validate-field="famely" name="name" class="style__input" type="text"
                 placeholder="Введите ваше имя">
             </label>
 
             <label class="form__one-labeltext" for="form__one_input-two"><span class="form__one__span">Телефон*</span>
-              <input data-validate-field="tel" id="form__one_input-two" name="Телефон" class="style__input" type="tel"
-                placeholder="+7(___) ___-__-__">
+              <input data-validate-field="tel" id="form__one_input-two" name="phone" class="style__input" type="tel"
+                placeholder="+7(___) ___-__-__" autocomplete="off">
             </label>
 
             <label class="form__one-labeltext" for="form__one_input-three"> <span class="form__one__span">Ваше
                 дружелюбное сообщение</span>
-              <textarea data-validate-field="textonform" id="form__one_input-three" name="message"
+              <textarea data-validate-field="textonform" id="form__one_input-three" name="massage"
                 class="style__textarea" placeholder="Введите текст сообщения"></textarea>
             </label>
             <div class="custom-checkbox__box">
               <div class="custom-checkbox__wrap">
 
                 <input data-validate-field="checkbox" type="checkbox" class="custom-checkbox"
-                  name="Согласие на обработку" id="form__one_checkbox-one" value="Да">
+                  name="agree" id="form__one_checkbox-one" value="Да">
                 <label for="form__one_checkbox-one"> Подтвердите право обработки персональной информации</label>
               </div>
+              <div class="form__end"></div>
             </div>
 
             <button class="style__button">отправить сообщение</button>
-            <div class="form__end"></div>
+
 
           </form>
         </div>
@@ -202,7 +203,8 @@
             <div class="timer__left">
               <form id="form__two" class="form__one form_send_two">
                 <input type="hidden" name="project_name" value="http://video.businesskvest.ru/new">
-                <input type="hidden" name="admin_email" value="frontendercode@gmail.com">
+                <input type="hidden" name="admin_email[]" value="frontendercode@gmail.com">
+                                <input type="hidden" name="admin_email[]" value="relaverlife@gmail.com">
                 <input type="hidden" name="form_subject" value="Тестирование валидации формы">
                 <input type="hidden" name="Место&nbsp;размещения" value="форма размещена во втором блоке на лендинге">
                 <input type="hidden" name="Опции&nbsp;формы" value="форма в стационарном блоке">
@@ -230,10 +232,11 @@
                       id="form__one_checkbox-onexa" value="Да">
                     <label for="form__one_checkbox-onexa"> Подтвердите право обработки персональной информации </label>
                   </div>
+                  <div class="form__end"></div>
                 </div>
 
                 <button class="style__button">отправить сообщение</button>
-                <div class="form__end"></div>
+
 
               </form>
 
@@ -279,20 +282,12 @@
     let selector = document.querySelectorAll('input[type="tel"]');
     let im = new Inputmask('+7 (999) 999-99-99');
     im.mask(selector);
-
     let selector2 = document.querySelector('input[type="tel"]');
-
     selector2.addEventListener('input', function () {
-      console.log(selector2.value)
-
-
+      //  console.log(selector2.value)
       const re = /^\d*(\.\d+)?$/
-
-      console.log(selector2.value.match(/[0-9]/g).length)
-
-
-      console.log(selector2.value.replace(/[0-9]/g, "0"));
-
+      // console.log(selector2.value.match(/[0-9]/g).length)
+      //console.log(selector2.value.replace(/[0-9]/g, "0"));
     });
 
 
@@ -308,15 +303,20 @@
           xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
               if (xhr.status === 200) {
+                $('form .form__end').html('форма отправлена');
+
                 console.log('Отправлено');
               }
             }
           }
 
-          xhr.open('POST', 'mail.php', true);
+          xhr.open('POST', 'telegram-mail.php', true);
           xhr.send(formData);
 
           form.reset();
+          setTimeout(function () {
+            $('form .form__end').html('');
+          }, 2000);
 
           //		fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
         }
@@ -328,7 +328,7 @@
         famely: {
           required: true,
           minLength: 5,
-          maxLength: 380
+          maxLength: 38
         },
         checkbox: {
           required: true,
@@ -349,8 +349,7 @@
           email: 'Email не валиден!'
         },
         tel: {
-          required: 'Поле обязательно к заполнению',
-          tel: 'Значение не валидно!'
+          required: 'Поле обязательно к заполнению'
         },
         famely: {
           required: 'Поле обязально к заполнению!',
@@ -365,7 +364,9 @@
     validateForms(
       ".form_send_two", {
         famely: {
-          required: true
+          required: true,
+          minLength: 5,
+          maxLength: 38
         },
         checkbox: {
           required: true,
@@ -386,8 +387,7 @@
           email: 'Email не валиден!'
         },
         tel: {
-          required: 'Поле обязательно к заполнению',
-          tel: 'Значение не валидно!'
+          required: 'Поле обязательно к заполнению'
         },
         famely: {
           required: 'Поле обязально к заполнению!',

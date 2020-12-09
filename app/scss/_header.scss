@@ -161,11 +161,6 @@
   margin-bottom: 10px;
 }
 
-// .form__one label {
-//   position: relative;
-//   display: block;
-//   margin-bottom: 10px;
-// }
 .js-validate-error-label {
   position: absolute;
   right: 0;
@@ -176,15 +171,15 @@
 }
 
 .custom-checkbox__box {
-  margin: 0 0 20px;
+  position: relative;
+  margin: 0;
   padding: 0;
+  padding-bottom: 40px;
 }
 
 .custom-checkbox__wrap {
   position: relative;
   display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .style__button {
@@ -257,4 +252,11 @@
 /* стили для чекбокса, находящегося в состоянии disabled */
 .custom-checkbox:disabled +label::before {
   background-color: #e9ecef;
+}
+
+.form__end {
+  position: absolute;
+  left: 20px;
+  bottom: 7px;
+  color: #ff0000;
 }
