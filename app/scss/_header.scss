@@ -121,7 +121,7 @@
 
 .timer__wrapper {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .timer__left {
@@ -155,12 +155,17 @@
   resize: vertical;
 }
 
-.form__one label {
+.form__one-labeltext {
   position: relative;
   display: block;
   margin-bottom: 10px;
 }
 
+// .form__one label {
+//   position: relative;
+//   display: block;
+//   margin-bottom: 10px;
+// }
 .js-validate-error-label {
   position: absolute;
   right: 0;
@@ -170,7 +175,14 @@
   text-align: right;
 }
 
+.custom-checkbox__box {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
 .custom-checkbox__wrap {
+  position: relative;
+  display: inline-block;
   margin-top: 20px;
   margin-bottom: 20px;
 }

@@ -38,7 +38,7 @@ $message = "<table style='width: 50%;'>$message</table>";
 
 
 // От кого
-$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'http://video.businesskvest.ru/new');
+$mail->setFrom('adm@' . $_SERVER['HTTP_HOST'], 'video.businesskvest.ru');
  
 // Кому
 foreach ( $admin_email as $key => $value ) {

@@ -139,31 +139,32 @@
             <input type="hidden" name="Место&nbsp;размещения" value="форма размещена в первом блоке на лендинге">
             <input type="hidden" name="Опции&nbsp;формы" value="форма в стационарном блоке">
 
-            <label for="form__one_input-no"> <span class="form__one__span">Имя*</span>
+            <label class="form__one-labeltext" for="form__one_input-no"> <span class="form__one__span">Имя*</span>
               <input id="form__one_input-no" data-validate-field="famely" name="Имя" class="style__input" type="text"
                 placeholder="Введите ваше имя">
             </label>
 
-            <label for="form__one_input-two"><span class="form__one__span">Телефон*</span>
+            <label class="form__one-labeltext" for="form__one_input-two"><span class="form__one__span">Телефон*</span>
               <input data-validate-field="tel" id="form__one_input-two" name="Телефон" class="style__input" type="tel"
                 placeholder="+7(___) ___-__-__">
             </label>
 
-            <label for="form__one_input-three"> <span class="form__one__span">Ваше дружелюбное сообщение</span>
+            <label class="form__one-labeltext" for="form__one_input-three"> <span class="form__one__span">Ваше
+                дружелюбное сообщение</span>
               <textarea data-validate-field="textonform" id="form__one_input-three" name="message"
                 class="style__textarea" placeholder="Введите текст сообщения"></textarea>
-
+            </label>
+            <div class="custom-checkbox__box">
               <div class="custom-checkbox__wrap">
+
                 <input data-validate-field="checkbox" type="checkbox" class="custom-checkbox"
                   name="Согласие на обработку" id="form__one_checkbox-one" value="Да">
-                <label for="form__one_checkbox-one">Подтвердите право обработки персональной информации </label>
+                <label for="form__one_checkbox-one"> Подтвердите право обработки персональной информации</label>
               </div>
+            </div>
 
-
-              <button class="style__button">отправить сообщение</button>
-              <div class="form__end"></div>
-            </label>
-
+            <button class="style__button">отправить сообщение</button>
+            <div class="form__end"></div>
 
           </form>
         </div>
@@ -191,12 +192,7 @@
 
         </div>
       </div>
-
-
     </section>
-
-
-
 
     <section class="former__block">
       <div class="container">
@@ -211,56 +207,45 @@
                 <input type="hidden" name="Место&nbsp;размещения" value="форма размещена во втором блоке на лендинге">
                 <input type="hidden" name="Опции&nbsp;формы" value="форма в стационарном блоке">
 
-                <label for="form__one_input-xa"> <span class="form__one__span">Имя*</span>
+                <label class="form__one-labeltext" for="form__one_input-xa"> <span class="form__one__span">Имя*</span>
                   <input id="form__one_input-xa" data-validate-field="famely" name="famely" class="style__input"
                     type="text" placeholder="Введите ваше имя">
                 </label>
 
-                <label for="form__one_input-twoxa"><span class="form__one__span">Телефон*</span>
+                <label class="form__one-labeltext" for="form__one_input-twoxa"><span
+                    class="form__one__span">Телефон*</span>
                   <input data-validate-field="tel" id="form__one_input-twoxa" name="phone" class="style__input"
                     type="tel" placeholder="+7(___) ___-__-__">
                 </label>
 
-                <label for="form__one_input-threexa"> <span class="form__one__span">Ваше дружелюбное сообщение</span>
+                <label class="form__one-labeltext" for="form__one_input-threexa"> <span class="form__one__span">Ваше
+                    дружелюбное сообщение</span>
                   <textarea data-validate-field="textonform" id="form__one_input-threexa" name="message"
                     class="style__textarea" placeholder="Введите текст сообщения"></textarea>
-
+                </label>
+                <div class="custom-checkbox__box">
                   <div class="custom-checkbox__wrap">
+
                     <input data-validate-field="checkbox" type="checkbox" class="custom-checkbox" name="agry"
                       id="form__one_checkbox-onexa" value="Да">
-                    <label for="form__one_checkbox-onexa">Подтвердите право обработки персональной информации </label>
+                    <label for="form__one_checkbox-onexa"> Подтвердите право обработки персональной информации </label>
                   </div>
+                </div>
 
-
-                  <button class="style__button">отправить сообщение</button>
-                  <div class="form__end"></div>
-                </label>
-
+                <button class="style__button">отправить сообщение</button>
+                <div class="form__end"></div>
 
               </form>
 
             </div>
             <div class="timer__right">
 
-
             </div>
 
           </div>
-
-
-
         </div>
       </div>
-
-
     </section>
-
-
-
-
-
-
-
 
 
     <section class="block__padd">
@@ -382,7 +367,7 @@
         famely: {
           required: true
         },
-                checkbox: {
+        checkbox: {
           required: true,
         },
         email: {
@@ -392,8 +377,7 @@
         tel: {
           required: true
         }
-      },
-       {
+      }, {
         checkbox: {
           required: 'Поле обязателено к заполнению',
         },
